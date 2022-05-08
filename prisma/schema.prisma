@@ -12,7 +12,7 @@ datasource db {
 
 model Recommendation {
   id          Int    @id @default(autoincrement())
-  name        String @unique
+  name        String 
   youtubeLink String
   score       Int    @default(0)
 

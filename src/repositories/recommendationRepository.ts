@@ -19,7 +19,7 @@ function findAll(findAllWhere?: FindAllWhere) {
   return prisma.recommendation.findMany({
     where: filter,
     orderBy: { id: "desc" },
-    take: 10
+    take: 10,
   });
 }
 
@@ -49,7 +49,7 @@ function find(id: number) {
 }
 
 function findByName(name: string) {
-  return prisma.recommendation.findUnique({
+  return prisma.recommendation.findFirst({
     where: { name },
   });
 }

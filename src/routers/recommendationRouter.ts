@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { recommendationController } from "../controllers/recommendationController.js";
+import { resetDatabase } from "../controllers/e2eTestController.js";
 
 const recommendationRouter = Router();
 
