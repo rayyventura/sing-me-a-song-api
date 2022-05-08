@@ -116,10 +116,10 @@ describe("GET /recommendations/top/:amount", () => {
 
     await prisma.recommendation.createMany({
       data: [
+        recommendation,
+        recommendation,
         { ...recommendation, score: 100 },
         { ...recommendation, score: 50 },
-        recommendation,
-        recommendation,
       ],
     });
 
