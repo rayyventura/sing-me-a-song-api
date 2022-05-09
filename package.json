@@ -11,7 +11,8 @@
     "start": "node dist/src/server.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i",
     "migrate": "npx prisma db push",
-    "migrate:test": "dotenv -e .env.test npx prisma migrate dev"
+    "migrate:test": "dotenv -e .env.test npx prisma migrate dev",
+    "coverage:test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "keywords": [],
   "author": "",
