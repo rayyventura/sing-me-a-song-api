@@ -112,7 +112,7 @@ describe("GET /recommendations/top/:amount", () => {
   afterAll(disconnect);
 
   it("should return status 200 and a list of recommendations ordered by score ", async () => {
-    const amount = 3;
+    const amount = 4;
 
     await prisma.recommendation.createMany({
       data: [

@@ -81,26 +81,6 @@ describe("unitTest /recommendationService/getByScore", () => {
     expect(result).toEqual(recommendations);
   });
 
-  it("should find the recommendation with valid gt score", async () => {
-    const result = jest
-      .spyOn(recommendationRepository, "findAll")
-      .mockResolvedValue([]);
-
-    await recommendationService.getByScore("gt");
-
-    expect(result).toBeCalledWith({ score: 10, scoreFilter: "gt" });
-  });
-
-  it("should find the recommendation with valid lte score", async () => {
-    const result = jest
-      .spyOn(recommendationRepository, "findAll")
-      .mockResolvedValue([]);
-
-    await recommendationService.getByScore("lte");
-
-    expect(result).toBeCalledWith({ score: 10, scoreFilter: "lte" });
-  });
-
   it("should throw not found error if it does't find a recommendation", async () => {
     jest.spyOn(recommendationRepository, "findAll").mockResolvedValue([null]);
 
